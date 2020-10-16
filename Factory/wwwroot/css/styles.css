@@ -65,3 +65,7 @@ div#footer {
 .btn-warning {
   color: darkred;
 }
+body{
+  color: black;
+  background:rgb(221, 221, 221);
+}
