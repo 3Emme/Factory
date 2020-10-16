@@ -48,7 +48,7 @@ For reference, here are the previous weeks' objectives:
     * Input:
     * Output:
 
-  3.[ ] Engineer and Machine edit views.
+  3.[x] Engineer and Machine edit views.
     * Input:
     * Output:
 
