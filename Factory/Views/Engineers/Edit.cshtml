@@ -7,11 +7,11 @@
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.EngineerId)
-  @Html.Label("Engineer Name")
+  @Html.Label("Name:")
   @Html.EditorFor(model => model.EngineerName,new {@required="required"})
-  @Html.Label("Engineer Description")
+  @Html.Label("Description:")
   @Html.EditorFor(model => model.EngineerDescription,new {@required="required"})
-  @Html.Label("Engineer Status")
+  @Html.Label("Status:")
   @Html.DropDownListFor(model => model.EngineerStatus, new List<SelectListItem>
   { new SelectListItem{Text="Idle", Value="Idle"},
     new SelectListItem{Text="Repairing", Value="Repairing"}
@@ -20,4 +20,4 @@
   <input type="submit" value="Save Changes" />
 }
 <hr />
-<p>@Html.ActionLink("Back to Engineers", "Index", null, null, new {@class="btn btn-primary btn-sm"})</p>
+<p>@Html.ActionLink("Cancel", "Index", null, null, new {@class="btn btn-primary btn-sm"})</p>
