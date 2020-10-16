@@ -5,11 +5,11 @@
 <h4>Add a new Engineer:</h4>
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.EngineerName)
-  @Html.TextBoxFor(model => model.EngineerName)
-  @Html.LabelFor(model => model.EngineerDescription)
-  @Html.TextBoxFor(model => model.EngineerDescription)
-  @Html.LabelFor(model => model.EngineerStatus)
+  @Html.Label("Name:")
+  @Html.TextBoxFor(model => model.EngineerName,new {required="required"})
+  @Html.Label("Description:")
+  @Html.TextBoxFor(model => model.EngineerDescription,new {required="required"})
+  @Html.Label("Status:")
   @Html.DropDownListFor(model => model.EngineerStatus, new List<SelectListItem>
   { new SelectListItem{Text="Idle", Value="Idle"},
     new SelectListItem{Text="Repairing", Value="Repairing"}

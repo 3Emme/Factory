@@ -5,11 +5,11 @@
 <h4>Add a new Machine</h4>
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.MachineName)
-  @Html.TextBoxFor(model => model.MachineName)
-  @Html.LabelFor(model => model.MachineDescription)
-  @Html.TextBoxFor(model => model.MachineDescription)
-  @Html.LabelFor(model => model.MachineStatus)
+  @Html.Label("Name:")
+  @Html.TextBoxFor(model => model.MachineName,new {required="required"})
+  @Html.Label("Description:")
+  @Html.TextBoxFor(model => model.MachineDescription,new {required="required"})
+  @Html.Label("Status:")
   @Html.DropDownListFor(model => model.MachineStatus, new List<SelectListItem>
   { new SelectListItem{Text="Operational", Value="Operational"},
     new SelectListItem{Text="Malfunctioning", Value="Malfunctioning"},
@@ -19,4 +19,4 @@
   <input type="submit" value="Add new Machine" class="btn btn-success btn-sm" />
 }
 <br>
-<p>@Html.ActionLink("Show all Machines", "Index", null, null, new {@class="btn btn-primary btn-sm"})</p>
+<p>@Html.ActionLink("Cancel", "Index", null, null, new {@class="btn btn-primary btn-sm"})</p>
