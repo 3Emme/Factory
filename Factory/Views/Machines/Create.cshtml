@@ -12,7 +12,7 @@
   @Html.LabelFor(model => model.MachineStatus)
   @Html.DropDownListFor(model => model.MachineStatus, new List<SelectListItem>
   { new SelectListItem{Text="Operational", Value="Operational"},
-    new SelectListItem{Text="Malfunctioning", Value="Malfunctioning"}
+    new SelectListItem{Text="Malfunctioning", Value="Malfunctioning"},
     new SelectListItem{Text="In Repair", Value="In Repair"}
   },"-Please select-")
   <br><br>
