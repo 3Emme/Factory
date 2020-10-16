@@ -56,7 +56,7 @@ For reference, here are the previous weeks' objectives:
     * Input:
     * Output:
 
-  5.[ ] Removal for engineers, machines, and their joins.
+  5.[x] Removal for engineers, machines, and their joins.
     * Input:
     * Output:
   
