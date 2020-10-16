@@ -6,6 +6,25 @@
 <hr />
 <h3>Name: @Html.DisplayFor(model => model.MachineName) | Status: @Html.DisplayFor(model => model.MachineStatus)</h3>
 <h3>Description: @Html.DisplayFor(model => model.MachineDescription)</h3>
+@if (@Model.Engineers.Count == 0)
+{
+  <p>This Machine is not assigned any Engineers</p>
+}
+else
+{
+  <h3>Engineers assigned to this Machine:</h3>
+  <ul>
+    @foreach (var join in Model.Engineers)
+    {
+      @using (Html.BeginForm("DeleteEngineer", "Machines"))
+      {
+      <li>@Html.ActionLink($"{join.Engineer.EngineerName}", "Details", "Engineers", new { id = join.Engineer.EngineerId })     <input type="submit" value="Remove" class="btn btn-warning btn-sm" /></li>
+      @Html.Hidden("machineId", @join.MachineId)
+      @Html.Hidden("joinId", @join.EngineerMachineId)      
+      }
+    }
+  </ul>  
+}
 <hr />
 <p>@Html.ActionLink("Edit this Machine", "Edit", new { id = Model.MachineId }, new {@class="btn btn-success btn-sm"})</p>
 <p>@Html.ActionLink("Add a Engineer", "AddEngineer", "Machines", new { id = Model.MachineId } , new {@class="btn btn-success btn-sm"})</p>
