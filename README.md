@@ -52,7 +52,7 @@ For reference, here are the previous weeks' objectives:
     * Input:
     * Output:
 
-  4.[ ] Engineer and Machine join tables with addengineer and addmachine views.
+  4.[x] Engineer and Machine join tables with addengineer and addmachine views.
     * Input:
     * Output:
 
