@@ -27,4 +27,5 @@ else
 }
 <hr />
 <p>@Html.ActionLink("Edit this Engineer", "Edit", new { id = Model.EngineerId }, new {@class="btn btn-success btn-sm"})</p>
+<p>@Html.ActionLink("Delete this Engineer", "Delete", new { id = Model.EngineerId }, new {@class="btn btn-danger btn-sm"})</p>
 <p>@Html.ActionLink("Add a Machine", "AddMachine", "Engineers", new { id = Model.EngineerId } , new {@class="btn btn-success btn-sm"})</p>
