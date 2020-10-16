@@ -6,7 +6,7 @@ img {
 }
 div#header {
   height: 70px;
-  background-color: rgb(0, 143, 100);
+  background-color: rgb(167, 110, 26);
   left: 0px;
   right: 0px;
   width: 100%;
@@ -50,16 +50,17 @@ li#headerLi a {
   font-size: 20px;
 }
 li#headerLi a:hover {
-  background-color: rgb(0, 83, 58)
+  background-color: rgb(165, 141, 5)
 }
 div#footer {
   position:fixed;
   bottom:0px;
   left:0px;
   width:100%;
-  color:#CCC;
-  background:#333;
-  padding:10px;
+  color:rgb(0, 0, 0);
+  background:rgb(172, 172, 172);
+  padding:3px;
+  text-align: center;
 }
 .btn-warning {
   color: darkred;
