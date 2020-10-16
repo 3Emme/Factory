@@ -8,3 +8,4 @@
 <h3>Description: @Html.DisplayFor(model => model.EngineerDescription)</h3>
 <hr />
 <p>@Html.ActionLink("Edit this Engineer", "Edit", new { id = Model.EngineerId }, new {@class="btn btn-success btn-sm"})</p>
+<p>@Html.ActionLink("Add a Machine", "AddMachine", "Engineers", new { id = Model.EngineerId } , new {@class="btn btn-success btn-sm"})</p>
