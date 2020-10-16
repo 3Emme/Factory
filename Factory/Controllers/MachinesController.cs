@@ -7,31 +7,31 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Factory.Controllers
 {
-  public class PatientsController : Controller
+  public class MachinesController : Controller
   {
     private readonly FactoryContext _db;
 
-    public PatientsController(FactoryContext db)
+    public MachinesController(FactoryContext db)
     {
       _db = db ;
     }
     public ActionResult Index()
     {
-      return View(_db.Patients.ToList());
+      return View(_db.Machines.ToList());
     }
     public ActionResult Create()
     {
-      ViewBag.DoctorId = new SelectList(_db.Doctors, "DoctorId", "Name");
+      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
       return View();
     }
 
     [HttpPost]
-    public ActionResult Create(Patient patient,int DoctorId)
+    public ActionResult Create(Machine machine,int EngineerId)
     {
-      _db.Patients.Add(patient);
-      if (DoctorId != 0)
+      _db.Machines.Add(machine);
+      if (EngineerId != 0)
       {
-        _db.DoctorPatient.Add(new DoctorPatient() { DoctorId = DoctorId, PatientId = patient.PatientId });
+        _db.EngineerMachine.Add(new EngineerMachine() { EngineerId = EngineerId, MachineId = machine.MachineId });
       }
       _db.SaveChanges();
       return RedirectToAction("Index");

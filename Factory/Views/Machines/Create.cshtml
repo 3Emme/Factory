@@ -2,21 +2,19 @@
   Layout = "_Layout";
 }
 
-@model DoctorsOffice.Models.Patient;
+@model Factory.Models.Machine;
 
-<h4>Add a new patient</h4>
+<h4>Add a new Machine</h4>
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.PatientName)
-    @Html.TextBoxFor(model => model.PatientName)
-    @Html.LabelFor(model => model.Birthdate)
-    @Html.TextBoxFor(model => model.Birthdate)
+    @Html.LabelFor(model => model.MachineName)
+    @Html.TextBoxFor(model => model.MachineName)
 
-    @Html.Label("Select doctor")
-    @Html.DropDownList("DoctorId")
+    @Html.Label("Select engineer")
+    @Html.DropDownList("EngineerId")
     <br><br>
-    <input type="submit" value="Add new patient" class="btn btn-success btn-sm" />
+    <input type="submit" value="Add new Machine" class="btn btn-success btn-sm" />
 }
 <br>
-<p>@Html.ActionLink("Show all patients", "Index", null, null, new {@class="btn btn-primary btn-sm"})</p>
+<p>@Html.ActionLink("Show all Machines", "Index", null, null, new {@class="btn btn-primary btn-sm"})</p>

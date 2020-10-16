@@ -1,19 +1,19 @@
-@using DoctorsOffice.Models;
+@using Factory.Models;
 @{
   Layout = "_Layout";
 }
 
-<h1>List of Patients</h1>
+<h1>List of Machines</h1>
 
-<h2>Patients</h2>
+<h2>Machines</h2>
 @if (@Model.Count == 0)
 {
-  <h3>No patients have been added yet!</h3>
+  <h3>No Machines have been added yet!</h3>
 }
-@foreach (Patient patient in Model)
+@foreach (Machine machine in Model)
 {
-  <li>@Html.ActionLink($"{patient.PatientName}", "Details", new { id = patient.PatientId}) </li>
+  <li>@Html.ActionLink($"{machine.MachineName}", "Details", new { id = machine.MachineId}) </li>
 }
 <br>
-<p>@Html.ActionLink("Add New Patient", "Create", null, null, new {@class="btn btn-success btn-sm"})</p>
-<p>@Html.ActionLink("Back to doctors", "Index","Doctors", null, new {@class="btn btn-primary btn-sm"})</p>
+<p>@Html.ActionLink("Add New Machine", "Create", null, null, new {@class="btn btn-success btn-sm"})</p>
+<p>@Html.ActionLink("Back to Engineers", "Index","Engineers", null, new {@class="btn btn-primary btn-sm"})</p>

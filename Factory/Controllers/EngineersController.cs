@@ -7,18 +7,18 @@ using System.Linq;
 
 namespace Factory.Controllers
 {
-  public class DoctorsController : Controller
+  public class EngineersController : Controller
   {
     private readonly FactoryContext _db;
 
-    public DoctorsController(FactoryContext db)
+    public EngineersController(FactoryContext db)
     {
       _db = db ;
     }
 
     public ActionResult Index()
     {
-      List<Doctor> model = _db.Doctors.ToList();
+      List<Engineer> model = _db.Engineers.ToList();
       return View(model);
     }
 
@@ -28,9 +28,9 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Doctor doctor)
+    public ActionResult Create(Engineer engineer)
     {
-      _db.Doctors.Add(doctor);
+      _db.Engineers.Add(engineer);
       _db.SaveChanges();
       return RedirectToAction("Index");
     } 
