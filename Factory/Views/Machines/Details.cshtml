@@ -6,3 +6,5 @@
 <hr />
 <h3>Name: @Html.DisplayFor(model => model.MachineName) | Status: @Html.DisplayFor(model => model.MachineStatus)</h3>
 <h3>Description: @Html.DisplayFor(model => model.MachineDescription)</h3>
+<hr />
+<p>@Html.ActionLink("Edit this Machine", "Edit", new { id = Model.MachineId }, new {@class="btn btn-success btn-sm"})</p>
