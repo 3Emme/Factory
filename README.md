@@ -44,23 +44,23 @@ For reference, here are the previous weeks' objectives:
     * Input:
     * Output:
 
-  2.[] Engineer and Machine detail views.
+  2.[ ] Engineer and Machine detail views.
     * Input:
     * Output:
 
-  3.[] Engineer and Machine edit views.
+  3.[ ] Engineer and Machine edit views.
     * Input:
     * Output:
 
-  4.[] Engineer and Machine join tables with addengineer and addmachine views.
+  4.[ ] Engineer and Machine join tables with addengineer and addmachine views.
     * Input:
     * Output:
 
-  5.[] Removal for engineers, machines, and their joins.
+  5.[ ] Removal for engineers, machines, and their joins.
     * Input:
     * Output:
   
-  6.[] Splashpage for all engineers and machines.
+  6.[ ] Splashpage for all engineers and machines.
     * Input:
     * Output:
 
