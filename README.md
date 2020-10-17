@@ -60,7 +60,7 @@ For reference, here are the previous weeks' objectives:
     * Input:
     * Output:
   
-  6.[ ] Splashpage for all engineers and machines.
+  6.[x] Splashpage for all engineers and machines.
     * Input:
     * Output:
 
